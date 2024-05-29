@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_dht22_tab/templates *
+recursive-include octoprint_dht22_tab/translations *
+recursive-include octoprint_dht22_tab/static *
