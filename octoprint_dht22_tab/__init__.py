@@ -14,7 +14,8 @@ class DHT22TabPlugin(octoprint.plugin.StartupPlugin,
     def get_template_configs(self):
         return [
             dict(type="tab", template="dht22_tab.jinja2", custom_bindings=True),
-            dict(type="settings", template="dht22_tab_settings.jinja2")
+            dict(type="settings", template="dht22_tab_settings.jinja2"),
+            dict(type="navbar", template="dht22_tab_navbar.jinja2")
         ]
 
     def get_assets(self):
