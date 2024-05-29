@@ -1,6 +1,7 @@
 import octoprint.plugin
 import requests
 
+
 class DHT22TabPlugin(octoprint.plugin.StartupPlugin,
                      octoprint.plugin.TemplatePlugin,
                      octoprint.plugin.AssetPlugin,
@@ -47,6 +48,7 @@ class DHT22TabPlugin(octoprint.plugin.StartupPlugin,
         except requests.RequestException as e:
             self._logger.error("Failed to fetch data from Arduino: %s", e)
             return str(e), 500
+
 
 __plugin_name__ = "DHT22 Tab"
 __plugin_pythoncompat__ = ">=3,<4"
