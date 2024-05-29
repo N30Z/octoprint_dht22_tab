@@ -25,9 +25,10 @@ class DHT22TabPlugin(octoprint.plugin.StartupPlugin,
         }
 
     def get_settings_defaults(self):
-        return {
-            "arduino_ip": "192.168.178.57"
-        }
+        return dict(
+            refresh_rate=10,
+            arduino_ip="192.168.178.57"
+        )
 
     def on_settings_save(self, data):
         old_ip = self._settings.get(["arduino_ip"])
@@ -49,6 +50,9 @@ class DHT22TabPlugin(octoprint.plugin.StartupPlugin,
         except requests.RequestException as e:
             self._logger.error("Failed to fetch data from Arduino: %s", e)
             return str(e), 500
+
+    def get_template_vars(self):
+        return dict(settings=self._settings)
 
 
 __plugin_name__ = "DHT22 Tab"

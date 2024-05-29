@@ -1,3 +1,18 @@
-#dht22_tab iframe {
-    border: none;
+#dht22_tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dht22-icon {
+    margin-right: 10px;
+}
+
+#dht22_log {
+    background-color: #282828;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 200px;
+    overflow-y: auto;
 }
