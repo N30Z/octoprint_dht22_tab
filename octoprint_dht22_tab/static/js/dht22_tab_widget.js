@@ -14,7 +14,7 @@ $(function() {
                 $("#navbar_temperature").text(temperature);
                 $("#navbar_humidity").text(humidity);
 
-                addLogMessage("Data fetched successfully from Arduino.");
+                //addLogMessage("Data fetched successfully from Arduino.");
                 addLogMessage("Temperature: " + temperature + "°C, Humidity: " + humidity + "%");
             } else {
             $("#navbar_temperature").text("--");
