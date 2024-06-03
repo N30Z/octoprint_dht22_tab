@@ -12,14 +12,14 @@ class DHT22TabPlugin(octoprint.plugin.StartupPlugin,
 
     def get_template_configs(self):
         return [
-            dict(type="navbar", custom_bindings=True),
-            dict(type="settings", custom_bindings=True),
-            dict(type="tab", name="DHT22", template="dht22_tab.jinja2", custom_bindings=True)
+            dict(type="navbar", template="dht22_navbar.jinja2"),
+            dict(type="settings", template="dht22_settings.jinja2"),
+            dict(type="tab", name="DHT22", template="dht22_tab.jinja2", custom_bindings=False)
         ]
 
     def get_assets(self):
         return {
-            "js": ["js/dht22_tab.js", "js/dht22_tab_widget.js"],
+            "js": ["js/dht22_tab_widget.js"],
             "css": ["css/dht22_tab.css"]
         }
 
