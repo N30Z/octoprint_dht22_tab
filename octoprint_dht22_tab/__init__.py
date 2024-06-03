@@ -19,7 +19,7 @@ class DHT22TabPlugin(octoprint.plugin.StartupPlugin,
 
     def get_assets(self):
         return {
-            "js": ["js/dht22_tab_widget.js"],
+            "js": ["js/dht22_tab.js"],
             "css": ["css/dht22_tab.css"]
         }
 

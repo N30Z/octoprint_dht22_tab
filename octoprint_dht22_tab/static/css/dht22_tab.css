@@ -1,19 +1,9 @@
-#dht22_tab {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.dht22-icon {
-    margin-right: 2px;
-}
-
 #dht22_log {
-    background-color: #282828;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 300px;
-    height: 600px;
+    max-height: 200px;
     overflow-y: auto;
+}
+#dht_navbar-text {
+  box-sizing: border-box;
+  height: auto;
+  vertical-align: middle;
 }
